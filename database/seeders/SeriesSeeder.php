@@ -16,20 +16,20 @@ class SeriesSeeder extends Seeder
     {
         DB::table('series')->insert([
 
-            ['Nom' => "A1"],1
-            ['Nom' => "A2"],2
-            ['Nom' => "B"],3
-            ['Nom' => "C"],4
-            ['Nom' => "D"],5
-            ['Nom' => "E"],6
-            ['Nom' => "F1"],7
-            ['Nom' => "F2"],8
-            ['Nom' => "F3"],9
-            ['Nom' => "F4"],10
-            ['Nom' => "G1"],11
-            ['Nom' => "G2"],12
-            ['Nom' => "G3"],13
-            ['Nom' => "Filière Eau et Assainissement"],14
+            ['Nom' => "A1"],
+            ['Nom' => "A2"],
+            ['Nom' => "B"],
+            ['Nom' => "C"],
+            ['Nom' => "D"],
+            ['Nom' => "E"],
+            ['Nom' => "F1"],
+            ['Nom' => "F2"],
+            ['Nom' => "F3"],
+            ['Nom' => "F4"],
+            ['Nom' => "G1"],
+            ['Nom' => "G2"],
+            ['Nom' => "G3"],
+            ['Nom' => "Filière Eau et Assainissement"],
 
         ]);
     }
