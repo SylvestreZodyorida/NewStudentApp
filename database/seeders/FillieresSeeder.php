@@ -13,7 +13,7 @@ class FillieresSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('filliers')->insert([
+        DB::table('fillieres')->insert([
 
             ['Nom' => "Santé publique polyvalente",'Etablissement' => 'Institut Régional de Santé Publique (IRSP) -- UAC'],
 
@@ -36,67 +36,6 @@ class FillieresSeeder extends Seeder
             ['Nom' => "Sciences du Langage et de la Communication",'Etablissement' => "Faculté des Lettres,Langues, Arts et Communications(FLLAC) -- UAC"],
 
             ['Nom' => "Aministration Culturelle",'Etablissement' => "Institut National des Métiers d'Arts, d'Archéologie et de la Culture (INMAAC) -- UAC"],
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         ]);
     }

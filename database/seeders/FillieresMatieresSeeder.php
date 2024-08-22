@@ -13,7 +13,7 @@ class FillieresMatieresSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('fillieres_matieeres')->insert([
+        DB::table('fillieres_matieres')->insert([
 
             ['id_filliere' => 1, "matiere" =>"SVT" ],
             ['id_filliere' => 1, "matiere" =>"PCT" ],
