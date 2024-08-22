@@ -1,7 +1,10 @@
 <?php
 
+use App\Models\Series;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $series=Series::all();
+    return view('welcome',compact('series'));
 });

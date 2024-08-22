@@ -1,0 +1,35 @@
+.AppContent{
+    background-color: rgb(0, 9, 137);
+}
+.AppContent .content{
+    background: rgb(255, 255, 255) !important;
+    /* height: 400px; */
+    border: 1px solid rgb(19, 19, 19);
+    width: 30%;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* box-shadow: 0px 0px 10px rgb(17, 0, 170); */
+
+}
+.AppContent p {
+    margin-top: 20px;
+    font-size: 20px;
+    align-items: center;
+    padding: 20px;
+    font-family: sans-serif;
+    /* background-color: rgb(228, 228, 228); */
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.AppContent form {
+    margin-top: -20px;
+}
+.AppContent label {
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(167, 80, 4);
+}
+.AppContent button {
+    background-color: rgb(1, 85, 219);
+}
