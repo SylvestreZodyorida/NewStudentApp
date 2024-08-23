@@ -13,24 +13,30 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+<body class="font-sans ">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <div class="d-flex justify-content-center align-items-center vh-100 mt-3 AppContent">
+        <div class="d-flex justify-content-center align-items-center  mt-3 AppContent">
             <div class="text-center fade content">
                 <!-- Contenu de votre div -->
-                <h1>Bienvenue</h1>
-                <p>Nous vous aidons à déterminer les filières les plus prometteuses pour vous.</p>
-                <form action="{{ route('next_step') }}" method="POST" class="p-3">
+                <h1>Renseignez vos notes</h1>
+                <p>Consultez votre relevé de notes du baccalaureat série {{ $serie->Nom }}</p>
+                <form action="{{ route('proccess') }}" method="POST" class="p-3">
                     @csrf
-                    <div class="mb-3">
-                        <label for="serie" class="form-label">Sélectionnez votre série</label>
-                        <select name="serie" id="serie" class="form-select" required>
-                            <option value="">Choisir une série</option>
-                            @foreach ($series as $serie)
-                                <option value="{{ $serie->id }}">{{ $serie->Nom }}</option>
+                    <input type="hidden" name="serie" value="{{ $serie->id }}"  required>
+
+                    @foreach ($matieres->chunk(2) as $matierePair)
+                        <div class="row mb-4">
+                            @foreach ($matierePair as $matiere)
+                                <div class="col-md-6">
+                                    <label for="note_{{ $matiere->id }} " class="noteLabel col-form-label">{{ $matiere->Nom }} <span style="color: rgb(247, 59, 7);">/20</span></label>
+                                    <input type="number" class="form-control" id="note_{{ $matiere->Nom }}" name="note_{{ $matiere->Nom }}" value="" required>
+                                    <input type="hidden" class="form-control" id="coef_{{ $matiere->Coefficient }}" name="coef_{{ $matiere->Nom }}" value="{{ $matiere->Coefficient }}" required>
+                                </div>
                             @endforeach
-                        </select>
-                    </div>
+                        </div>
+                    @endforeach
+
+
                     <button class="btn btn-success">Continuer</button>
                 </form>
             </div>
